@@ -7,40 +7,50 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-        <!-- Navigation -->
+    <!-- Page Loader -->
+    <div id="loader">
+        <div class="loader-circle"></div>
+    </div>
+
+    <!-- Navigation -->
     <nav class="navbar">
-        <div class="nav-logo">MyPortfolio</div>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+  <div class="nav-logo">George K</div>
+  <ul class="nav-links">
+    <li><a href="#hero" class="active">Home</a></li>
+    <li><a href="#portfolio">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>  <!-- NEW -->
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
     <!-- Hero Section -->
     <header class="hero">
-        <h1>Your Name</h1>
+        <canvas id="particle-canvas"></canvas>
+        <h1>George Adriel Kurniawan</h1>
         <p class="tagline">Your tagline goes here</p>
-        <a href="#portfolio" class="btn">View My Work</a>
+        <a href="#projects" class="btn">View My Work</a>
+        <div class="scroll-down-indicator">
+            <span>↓</span>
+        </div>
     </header>
 
+
     <!-- About Section -->
-    <section id="about">
+    <section id="about" class="pop-section">
         <h2>About Me</h2>
-        <p>Short introduction about who you are, your skills, and what you do.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, provident? Excepturi aut porro illo. Maxime doloremque accusantium, id alias asperiores iusto vel aperiam consequatur vitae sit nisi saepe incidunt recusandae?</p>
     </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio">
+    <section id="portfolio" class="pop-section">
         <h2>Portfolio</h2>
         <div class="projects">
-            <div class="project-card">
+            <div class="project-card reveal" data-title="Project One" data-description="A detailed description about Project One goes here. You can talk about the tech used, challenges faced, and the outcome." data-image="project1.jpg">
                 <img src="project1.jpg" alt="Project 1">
                 <h3>Project Title</h3>
                 <p>Short description of the project.</p>
             </div>
-            <div class="project-card">
+
+            <div class="project-card reveal" data-title="Project Two" data-description="A detailed description about Project Two goes here. This is where you can showcase its unique features." data-image="project2.jpg">
                 <img src="project2.jpg" alt="Project 2">
                 <h3>Project Title</h3>
                 <p>Short description of the project.</p>
@@ -48,8 +58,73 @@
         </div>
     </section>
 
+    <section id="skills" class="pop-section">
+  <h2>Skills</h2>
+  <div class="skills">
+    <div class="skill-card" data-skill="python">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python logo" />
+  <span>Python</span>
+  <p class="skill-desc">Versatile language great for web, data, and automation.</p>
+  <div class="skill-bar">
+    <div class="skill-level" data-level="85"></div>
+  </div>
+  <span class="skill-percent">85%</span>
+</div>
+
+<div class="skill-card" data-skill="cpp">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++ logo" />
+  <span>C++</span>
+  <p class="skill-desc">High-performance language for system/software development.</p>
+  <div class="skill-bar">
+    <div class="skill-level" data-level="75"></div>
+  </div>
+  <span class="skill-percent">75%</span>
+</div>
+
+<div class="skill-card" data-skill="html">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML logo" />
+  <span>HTML</span>
+  <p class="skill-desc">The backbone of web content and structure.</p>
+  <div class="skill-bar">
+    <div class="skill-level" data-level="90"></div>
+  </div>
+  <span class="skill-percent">90%</span>
+</div>
+
+<div class="skill-card" data-skill="css">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS logo" />
+  <span>CSS</span>
+  <p class="skill-desc">Stylizes and visually enhances websites.</p>
+  <div class="skill-bar">
+    <div class="skill-level" data-level="88"></div>
+  </div>
+  <span class="skill-percent">88%</span>
+</div>
+
+<div class="skill-card" data-skill="javascript">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript logo" />
+  <span>JavaScript</span>
+  <p class="skill-desc">Adds interactivity and dynamic behavior to webpages.</p>
+  <div class="skill-bar">
+    <div class="skill-level" data-level="80"></div>
+  </div>
+  <span class="skill-percent">80%</span>
+</div>
+
+<div class="skill-card" data-skill="c">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C logo" />
+  <span>C</span>
+  <p class="skill-desc">Foundational language for system programming.</p>
+  <div class="skill-bar">
+    <div class="skill-level" data-level="70"></div>
+  </div>
+  <span class="skill-percent">70%</span>
+</div>
+  </div>
+</section>
+
     <!-- Experience Section -->
-    <section id="experience">
+    <section id="experience" class="pop-section">
         <h2>Experience</h2>
         <ul>
             <li><strong>Job/Role</strong> – Company – Year</li>
@@ -58,11 +133,25 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
+    <section id="contact" class="pop-section">
         <h2>Contact</h2>
         <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
         <p>Or find me on social media.</p>
     </section>
+
+    <!-- Project Modal -->
+<div id="project-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <img id="modal-image" src="" alt="Project Image">
+        <h2 id="modal-title"></h2>
+        <p id="modal-description"></p>
+    </div>
+</div>
+
+<button id="backToTop" title="Go to top">↑</button>
+
+<div class="custom-cursor"></div>
 
     <footer>
         <p>&copy; 2025 Your Name. All rights reserved.</p>
